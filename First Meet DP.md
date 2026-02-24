@@ -23,6 +23,7 @@ O: A number a<sub>i</sub><sub>j</sub>mod(10<sup>9</sup>+7)
 
 ### False Solution
 
+```
   #include <iostream>
   #include<cmath>
   using namespace std;
@@ -42,12 +43,14 @@ O: A number a<sub>i</sub><sub>j</sub>mod(10<sup>9</sup>+7)
       cout<<(fibonacci(n,m))%(7+(int)pow(10,9));
       return 0;
   }
+```
 
 Although I use iostream accelerator and have no mistakes in programming, it sill TLE.  
 This code is actually doing a m-by-n grid, and the recursive way of computing will finally increasing as a expotential speed.
 
 ### Correct Solution
 
+```
   #include<iostream>
   using namespace std;
   
@@ -66,6 +69,7 @@ This code is actually doing a m-by-n grid, and the recursive way of computing wi
       cout<<dp[n][m];
       return 0;
   }
+```
 
 The only feasible path: DP.  
 The essence of this question is: How many ways to go from (1,1) to (n,m)?  
