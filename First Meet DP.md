@@ -10,7 +10,7 @@ Just to say, the reason why I use such an awful writing skill to record my blog 
 ## Question
 
 This question is come from the *130 questions for the beginners* in **nowcoder tracker** (yes, I still thick I'm so weak for any formal contest, and sure I am).  
-noob40:
+noob40:  
 This is a two-dimensional Fibonacci sequence：
 a<sub>i</sub><sub>j</sub>=1 i=1,j=1
 a<sub>i</sub><sub>j</sub>=a<sub>i-1</sub><sub>j</sub> i>=2,j=1
