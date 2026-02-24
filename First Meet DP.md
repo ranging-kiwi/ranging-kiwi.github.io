@@ -24,25 +24,25 @@ O: A number a<sub>i</sub><sub>j</sub>mod(10<sup>9</sup>+7)
 ### False Solution
 
 ```
-  #include <iostream>
-  #include<cmath>
-  using namespace std;
-  
-  long long fibonacci(int n,int m){
-      if(n==1&&m==1) return 1;
-      if(n>1&&m==1) return fibonacci(n-1,m);
-      if(n==1&&m>1) return fibonacci(n,m-1);
-      return fibonacci(n-1,m-1);
-  }
-  
-  int main() {
-      ios::sync_with_stdio(false);
-      cin.tie(0);
-      int n,m;
-      cin>>n>>m;
-      cout<<(fibonacci(n,m))%(7+(int)pow(10,9));
-      return 0;
-  }
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+long long fibonacci(int n,int m){
+    if(n==1&&m==1) return 1;
+    if(n>1&&m==1) return fibonacci(n-1,m);
+    if(n==1&&m>1) return fibonacci(n,m-1);
+    return fibonacci(n-1,m-1);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    int n,m;
+    cin>>n>>m;
+    cout<<(fibonacci(n,m))%(7+(int)pow(10,9));
+    return 0;
+}
 ```
 
 Although I use iostream accelerator and have no mistakes in programming, it sill TLE.  
@@ -51,24 +51,24 @@ This code is actually doing a m-by-n grid, and the recursive way of computing wi
 ### Correct Solution
 
 ```
-  #include<iostream>
-  using namespace std;
-  
-  const int mod=1000000007;
-  int dp[1000][1000];
-  
-  int main(){
-      int n,m;
-      cin>>n>>m;
-      for(int i=1;i<=n;i++){
-          for(int j=1;j<=m;j++){
-              if(i==1||j==1) dp[i][j]=1;
-              else dp[i][j]=(dp[i-1][j]+dp[i][j-1])%mod;
-          }
-      }
-      cout<<dp[n][m];
-      return 0;
-  }
+#include<iostream>
+using namespace std;
+
+const int mod=1000000007;
+int dp[1000][1000];
+ 
+int main(){
+    int n,m;
+    cin>>n>>m;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=m;j++){
+            if(i==1||j==1) dp[i][j]=1;
+            else dp[i][j]=(dp[i-1][j]+dp[i][j-1])%mod;
+        }
+    }
+    cout<<dp[n][m];
+    return 0;
+}
 ```
 
 The only feasible path: DP.  
