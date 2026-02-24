@@ -11,12 +11,12 @@ Just to say, the reason why I use such an awful writing skill to record my blog 
 
 This question is come from the *130 questions for the beginners* in **nowcoder tracker** (yes, I still thick I'm so weak for any formal contest, and sure I am).  
 noob40:  
-This is a two-dimensional Fibonacci sequence：
-a<sub>i</sub><sub>j</sub>=1 i=1,j=1
-a<sub>i</sub><sub>j</sub>=a<sub>i-1</sub><sub>j</sub> i>=2,j=1
-a<sub>i</sub><sub>j</sub>=a<sub>i</sub><sub>j-1</sub> i=1,j>=2
-a<sub>i</sub><sub>j</sub>=a<sub>i-1</sub><sub>j</sub>+a<sub>i</sub><sub>j-1</sub> i>=2,j>=2
-I: Enter two integers n,m, stand for row and column coordinate respectively, 1<=n,m<=10<sup>3</sup>
+This is a two-dimensional Fibonacci sequence:  
+a<sub>i</sub><sub>j</sub>=1 i=1,j=1  
+a<sub>i</sub><sub>j</sub>=a<sub>i-1</sub><sub>j</sub> i>=2,j=1  
+a<sub>i</sub><sub>j</sub>=a<sub>i</sub><sub>j-1</sub> i=1,j>=2  
+a<sub>i</sub><sub>j</sub>=a<sub>i-1</sub><sub>j</sub>+a<sub>i</sub><sub>j-1</sub> i>=2,j>=2  
+I: Enter two integers n,m, stand for row and column coordinate respectively, 1<=n,m<=10<sup>3</sup>  
 O: A number a<sub>i</sub><sub>j</sub>mod(10<sup>9</sup>+7)
 
 ## Solution
