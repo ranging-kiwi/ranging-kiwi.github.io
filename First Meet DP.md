@@ -1,4 +1,4 @@
-# The first claash against Dynamic Programming Feb/24
+# The First Clash against Dynamic Programming Feb/24
 
 ## How the story begin
 
