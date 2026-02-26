@@ -9,7 +9,7 @@ O: show the answer of f<sub>k</sub>mod(10<sup>9</sup>+7)
 
 ## Analyse:
 
-Considering 1<=k<=10<sup>6</sup>, firstly, the `long long` data type can't hold the expotentially large results; secondly, the recursive algorithm can't , which means there will be a stack overflow.
+Considering 1<=k<=10<sup>6</sup>, firstly, the `long long` data type can't hold the expotentially large results; secondly, recursive algorithm can't work, which means there will be a stack overflow and a large aount of repetitive calculation.
 
 Then, here comes the **Dynamic Programming** algorithm and the **modular arithmatic**.
 
@@ -21,9 +21,32 @@ There exists even another algorithmic approach to solve this problem.
 
 **Matrix Exponentiation.**
 
-We can write the recursive relationship in Fibonacci series as **Matrix Mutiplication**
+We can write the recursive relationship in Fibonacci series as **Matrix Mutiplication**, in mathematical language:
 
 (a row of matrix mutiplication is omitted here)  
 (and a row of matrix exponentiation is omitted here)
 
-Utilizing binary exponentiation of matrices, the complexity reduce to O(k) to O(log<sub>2</sub> k)
+Utilizing binary exponentiation of matrices, the complexity reduce to O(k) to O(log<sub>2</sub> k).
+
+## Solution:
+
+```
+#include <iostream>
+using namespace std;
+int main(){
+    int k;
+    cin>>k;
+    const int mod=1000000007;
+    long long a=1;
+    long long b=1;
+    long long res=0;
+    for(int i=3;i<=k;i++){
+        res=a%mod+b%mod;
+        a=b;
+        b=res;
+    }
+    cout<<res%mod;
+    return 0;
+}
+```
+
