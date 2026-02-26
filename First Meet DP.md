@@ -9,7 +9,7 @@ Just to say, the reason why I use such an awful writing skill to record my blog 
 
 ## Question
 
-This question is come from the *130 questions for the beginners* in **nowcoder tracker** (yes, I still thick I'm so weak for any formal contest, and sure I am).  
+This question is come from the *130 questions for the beginners* in **nowcoder tracker** (yes, I still suppose I'm so weak for any formal contest, and sure I am).  
 noob40:  
 This is a two-dimensional Fibonacci sequence:  
 a<sub>i</sub><sub>j</sub>=1 i=1,j=1  
@@ -76,7 +76,7 @@ The essence of this question is: How many ways to go from (1,1) to (n,m)?
 And this is the definition of Dynamic Programming: number of unique path in a grid (the formula of DP).  
 Dynamic Programming is like a kind of that: pre-traversal all of the datas and record for memoization, and one data comes from function(pre-data).
 
-## Some knowledge need to be added (by AI)
+## Some knowledge need to be added
 
 Dynamic Programming three elements:  
 1. State definition: something to describe the state, like dp[i][j] stands for the number of path to reach (i,j)  
