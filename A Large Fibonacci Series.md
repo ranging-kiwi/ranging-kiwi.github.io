@@ -30,6 +30,7 @@ Utilizing binary exponentiation of matrices, the complexity reduce to O(k) to O(
 
 ## Solution:
 
+Dynamic Porgramming:
 ```
 #include <iostream>
 using namespace std;
@@ -50,3 +51,51 @@ int main(){
 }
 ```
 
+Matrix Exponentiation:
+```
+#include<iostream>
+using namespace std;
+const int mod=1000000007;
+struct Matrix{
+    long long entry[2][2];
+    Matrix(){
+        entry[0][0]=entry[0][1]=entry[1][0]=entry[1][1]=0;
+    }
+};
+Matrix mutiplication(Matrix A,Matrix B){
+    Matrix C;
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            for(int k=0;k<2;k++){
+                C.entry[i][j]=(C.entry[i][j]+A.entry[i][k]*B.entry[k][j])%mod;
+            }
+        }
+    }
+    return C;
+}
+Matrix power(Matrix A,int p){
+    Matrix res;
+    res.entry[0][0]=res.entry[1][1]=1;
+    res.entry[0][1]=res.entry[1][0]=0;
+    while(p>0){
+        if(p%2!=0) res=mutiplication(res,A);
+        A=mutiplication(A,A);
+        p/=2;
+    }
+    return res;
+}
+int main(){
+    int k;
+    cin>>k;
+    if(k<=2){
+        cout<<1;
+        return 0;
+    }
+    Matrix T;
+    T.entry[0][0]=T.entry[0][1]=T.entry[1][0]=1;
+    T.entry[1][1]=0;
+    Matrix res=power(T,k-1);
+    cout<<res.entry[0][0];
+    return 0;
+}
+```
